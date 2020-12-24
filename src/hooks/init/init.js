@@ -36,7 +36,7 @@ module.exports = async function(opts)
 {
    try
    {
-      process.pluginManager.add({ name: 'plugin-json', instance: PluginHandler });
+      global.$$pluginManager.add({ name: 'plugin-json', instance: PluginHandler });
 
       // TODO REMOVE
       process.stdout.write(`plugin-json init hook running ${opts.id}\n`);
