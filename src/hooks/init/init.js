@@ -42,7 +42,7 @@ module.exports = async function(opts)
 {
    try
    {
-      global.$$pluginManager.add({ name: '@typhonjs-node-bundle/plugin-json', instance: PluginHandler });
+      global.$$pluginManager.add({ name: '@typhonjs-node-rollup/plugin-json', instance: PluginHandler });
 
       // TODO REMOVE
       process.stdout.write(`plugin-json init hook running ${opts.id}\n`);
