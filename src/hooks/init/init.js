@@ -44,8 +44,7 @@ module.exports = async function(opts)
    {
       global.$$pluginManager.add({ name: '@typhonjs-node-rollup/plugin-json', instance: PluginHandler });
 
-      // TODO REMOVE
-      process.stdout.write(`plugin-json init hook running ${opts.id}\n`);
+      global.$$eventbus.trigger('log:debug', `plugin-json init hook running '${opts.id}'.`);
    }
    catch (error)
    {
