@@ -9,9 +9,9 @@ class PluginLoader
    /**
     * Returns the `package.json` module name.
     *
-    * @returns {string[]}
+    * @returns {string}
     */
-   static get pluginName() { return ['@typhonjs-node-rollup/plugin-json']; }
+   static get pluginName() { return '@typhonjs-node-rollup/plugin-json'; }
 
    /**
     * Returns the rollup plugins managed.
