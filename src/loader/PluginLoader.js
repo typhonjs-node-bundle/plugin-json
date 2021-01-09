@@ -1,5 +1,8 @@
 const json = require('@rollup/plugin-json');
 
+const s_CONFLICT_PACKAGES = ['@rollup/plugin-json'];
+const s_PACKAGE_NAME = '@typhonjs-node-rollup/plugin-json';
+
 /**
  * Handles interfacing with the plugin manager adding event bindings to pass back a configured
  * instance of `@rollup/plugin-json`.
@@ -7,18 +10,18 @@ const json = require('@rollup/plugin-json');
 class PluginLoader
 {
    /**
+    * Returns the any modules that cause a conflict.
+    *
+    * @returns {string[]}
+    */
+   static get conflictPackages() { return s_CONFLICT_PACKAGES; }
+
+   /**
     * Returns the `package.json` module name.
     *
     * @returns {string}
     */
-   static get pluginName() { return '@typhonjs-node-rollup/plugin-json'; }
-
-   /**
-    * Returns the rollup plugins managed.
-    *
-    * @returns {string[]}
-    */
-   static get rollupPlugins() { return ['@rollup/plugin-json']; }
+   static get packageName() { return s_PACKAGE_NAME; }
 
    /**
     * Returns the configured input plugin for `@rollup/plugin-json`
