@@ -1,4 +1,4 @@
-const json = require('@rollup/plugin-json');
+import json from '@rollup/plugin-json';
 
 const s_CONFLICT_PACKAGES = ['@rollup/plugin-json'];
 const s_PACKAGE_NAME = '@typhonjs-node-rollup/plugin-json';
@@ -7,7 +7,7 @@ const s_PACKAGE_NAME = '@typhonjs-node-rollup/plugin-json';
  * Handles interfacing with the plugin manager adding event bindings to pass back a configured
  * instance of `@rollup/plugin-json`.
  */
-class PluginLoader
+export default class PluginLoader
 {
    /**
     * Returns the any modules that cause a conflict.
@@ -47,5 +47,3 @@ class PluginLoader
       ev.eventbus.on('typhonjs:oclif:bundle:plugins:main:input:get', PluginLoader.getInputPlugin, PluginLoader);
    }
 }
-
-module.exports = PluginLoader;
