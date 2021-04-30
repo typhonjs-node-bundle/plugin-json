@@ -1,7 +1,7 @@
 import json from '@rollup/plugin-json';
 
 const s_CONFLICT_PACKAGES = ['@rollup/plugin-json'];
-const s_PACKAGE_NAME = '@typhonjs-node-rollup/plugin-json';
+const s_PACKAGE_NAME = '@typhonjs-oclif-rollup/plugin-json';
 
 /**
  * Handles interfacing with the plugin manager adding event bindings to pass back a configured
@@ -24,7 +24,7 @@ export default class PluginLoader
    static get packageName() { return s_PACKAGE_NAME; }
 
    /**
-    * Returns the configured input plugin for `@rollup/plugin-json`
+    * Returns the configured input plugin for `@rollup/plugin-json`.
     *
     * @returns {object} Rollup plugin
     */
@@ -34,7 +34,7 @@ export default class PluginLoader
    }
 
    /**
-    * Wires up PluginHandler on the plugin eventbus.
+    * Wires up PluginLoader on the plugin eventbus.
     *
     * @param {object} ev - PluginInvokeEvent - The plugin event.
     *
